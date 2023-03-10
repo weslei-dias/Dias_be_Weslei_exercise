@@ -33,7 +33,12 @@ public class MembershipDto {
     @EqualsAndHashCode.Include
     private UUID roleId;
 
-    @JsonProperty(value = "teamMemberId")
+    /**
+     * The name of the attribute and the name of the property can be different,
+     * as long as the @JsonProperty annotation is used to specify the JSON property name.
+     * However in this case there is no need to have a different name
+     */
+    @JsonProperty(value = "userId")
     @Valid
     @NotNull
     @EqualsAndHashCode.Include

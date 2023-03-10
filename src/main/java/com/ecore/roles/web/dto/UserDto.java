@@ -12,6 +12,9 @@ import lombok.Setter;
 
 import java.util.UUID;
 
+/**
+ * Same comment as the TeamDto
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

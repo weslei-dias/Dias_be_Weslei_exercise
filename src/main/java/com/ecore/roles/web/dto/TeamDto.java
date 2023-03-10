@@ -13,6 +13,13 @@ import lombok.Setter;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Personally I don't like to have the JsonInclude.Include.NON_NULL, because if those fields are null, they won't
+ * be present on the response. This can generate a breaking change for clients that are consuming the api and are expecting to
+ * have this field for example.
+ * If the client knows what is the correct behaviour of those fields. Please ignore this change.
+ *
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -28,11 +35,9 @@ public class TeamDto {
     private String name;
 
     @JsonProperty
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private UUID teamLeadId;
 
     @JsonProperty
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<UUID> teamMemberIds;
 
     public static TeamDto fromModel(Team team) {

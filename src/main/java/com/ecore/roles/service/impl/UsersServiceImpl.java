@@ -14,7 +14,6 @@ public class UsersServiceImpl implements UsersService {
 
     private final UsersClient usersClient;
 
-    @Autowired
     public UsersServiceImpl(UsersClient usersClient) {
         this.usersClient = usersClient;
     }
