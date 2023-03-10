@@ -24,6 +24,9 @@ public class TestData {
     public static final UUID ORDINARY_CORAL_LYNX_TEAM_UUID =
             UUID.fromString("7676a4bf-adfe-415c-941b-1739af07039b");
 
+    public static final UUID INVALID_TEAM_UUID =
+            UUID.fromString("7676a4bf-adfe-415c-941b-1739af07039c");
+
     public static final UUID DEFAULT_MEMBERSHIP_UUID =
             UUID.fromString("98de61a0-b9e3-11ec-8422-0242ac120002");
 

@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @NoArgsConstructor
@@ -41,6 +43,17 @@ public class RoleDto {
                 .id(this.id)
                 .name(this.name)
                 .build();
+    }
+
+    public static List<RoleDto> getRoleDtoList(List<Role> roles) {
+        List<RoleDto> roleDtoList = new ArrayList<>();
+
+        for (Role role : roles) {
+            RoleDto roleDto = fromModel(role);
+            roleDtoList.add(roleDto);
+        }
+
+        return roleDtoList;
     }
 
 }

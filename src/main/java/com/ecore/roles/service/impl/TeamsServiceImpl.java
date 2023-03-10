@@ -14,7 +14,6 @@ public class TeamsServiceImpl implements TeamsService {
 
     private final TeamsClient teamsClient;
 
-    @Autowired
     public TeamsServiceImpl(TeamsClient teamsClient) {
         this.teamsClient = teamsClient;
     }

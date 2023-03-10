@@ -129,6 +129,7 @@ public class RolesApiTest {
                 .validate(404, format("Role %s not found", UUID_1));
     }
 
+
     @Test
     void shouldGetRoleByUserIdAndTeamId() {
         Membership expectedMembership = DEFAULT_MEMBERSHIP();
